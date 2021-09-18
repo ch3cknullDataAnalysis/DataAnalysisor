@@ -21,3 +21,8 @@ export interface IShowResponse {
 		stat: IStat[]
 	}
 }
+
+export interface IShowRequest {
+	key: string,
+	ids: number[]
+}
