@@ -21,9 +21,9 @@ export interface IShowResponse {
 	message: string,
 	data: {
 		// 元数据
-		raw: IRawData[],    //以,分隔开的一组数
+		raw: IRawData[],    //数组
 		// 统计指标
-		stat: IStat[]     //以,分隔开的键值对
+		stat: IStat[]     //一组map
 	}
 }
 
