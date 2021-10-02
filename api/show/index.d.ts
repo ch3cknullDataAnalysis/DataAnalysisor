@@ -2,7 +2,7 @@
 // 元数据类型
 type IRawCityData = {
 	year: number // 年份
-	data: number // 统计数据
+	data: number // 原始数据
 }
 
 type IRawData = {
