@@ -37,6 +37,6 @@ export interface IShowResponse {
 
 
 export interface IShowRequest {
-	key: string,
-	ids: number
+	key: string // 传递的对应
 }
+
