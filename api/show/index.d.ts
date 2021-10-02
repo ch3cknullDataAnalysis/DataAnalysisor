@@ -7,7 +7,7 @@ type IRawCityData = {
 
 type IRawData = {
 	name: string // 城市名称
-	keyName?: string // 对应指标 和传递的key一致
+	keyName: string // 对应指标 和传递的key一致
 	data: IRawCityData[] //统计数据 数组
 }
 
@@ -27,12 +27,10 @@ export interface IShowResponse {
 	code: number,
 	// 错误信息
 	message: string,
-	data: {
-		// 元数据
-		raw: IRawData[],    //数组
-		// 统计指标
-		stat: IStat[]     //一组map
-	}
+	// 元数据
+	raw: IRawData,    //map
+	// 统计指标
+	stat: IStat     //map
 }
 
 
