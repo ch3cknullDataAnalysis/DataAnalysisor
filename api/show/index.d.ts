@@ -1,10 +1,18 @@
 
 // 元数据类型
-type IRawData = number
+type IRawCityData = {
+	year: number // 年份
+	data: number // 统计数据
+}
+
+type IRawData = {
+	name: string // 城市名称
+	keyName?: string // 对应指标 和传递的key一致
+	data: IRawCityData[] //统计数据 数组
+}
 
 // 统计数据类型，包含统计指标
 interface IStat {
-	count:number,
 	sum:number,
 	mean:number,
 	median:number,
@@ -26,6 +34,7 @@ export interface IShowResponse {
 		stat: IStat[]     //一组map
 	}
 }
+
 
 export interface IShowRequest {
 	key: string,
