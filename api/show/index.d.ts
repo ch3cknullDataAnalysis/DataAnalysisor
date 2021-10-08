@@ -1,13 +1,10 @@
 
 // 元数据类型
-type IRawCityData = {
-	year: number // 年份
-	data: number // 原始数据
-}
+type IRawCityData = any[]
 
 type IRawData = {
 	name: string // 城市名称
-	keyName: string // 对应指标 和传递的key一致
+	keyName?: string // 对应指标 和传递的key一致
 	data: IRawCityData[] //统计数据 数组
 }
 
@@ -27,10 +24,12 @@ export interface IShowResponse {
 	code: number,
 	// 错误信息
 	message: string,
-	// 元数据
-	raw: IRawData,    //map
-	// 统计指标
-	stat: IStat     //map
+	data: {
+		// 元数据
+		raw: IRawData,    //数组
+		// 统计指标
+		stat: IStat     //一组map
+	}
 }
 
 
