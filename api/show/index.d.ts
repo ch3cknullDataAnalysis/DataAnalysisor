@@ -12,7 +12,7 @@ type IRawData = {
 interface IStat {
 	sum:number,
 	mean:number,
-	median:number,
+	medi:number,
 	max:number,
 	min:number
 	
