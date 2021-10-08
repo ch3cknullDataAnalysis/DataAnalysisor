@@ -5,9 +5,7 @@ export interface IPredictResponse {
   code: number
   // 错误信息
   message: string
-  data: {
-    num: number
-  }
+  data:number
 }
 
 export interface IPredictRequest {
