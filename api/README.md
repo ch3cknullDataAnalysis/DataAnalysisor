@@ -21,10 +21,6 @@
 ### 请求样例
 
 ```http
-GET http://domain.name/api/show?key=key1&cityNum=110000
-```
-
-```http
 GET http://domain.name/api/show?key=gdpSum&cityNum=110000,120000
 ```
 
@@ -34,41 +30,34 @@ GET http://domain.name/api/show?key=gdpSum&cityNum=110000,120000
 {
   "code": 0,
   "message": "OK",
+  "keyName": "gdpSum",
   "data": [
     {
-      "raw": {
-        "IRawCityData": [
-          [2013, 2014, 2015, 2016, 2017], // 年份
-          [19801, 21331, 23015, 25669, 28015] // 年份对应数据
-        ],
-        "name": "北京市",
-        "keyName": "gdpSum"
-      },
+      "cityName": "北京",
+      "raw": [
+        [2013, 2014, 2015, 2016, 2017],
+        [10010, 9100, 12020, 13000, 14100, 11550]
+      ],
       "stat": {
-        "city": "北京市",
-        "min": 19801,
-        "max": 28015,
-        "mean": 23566.2,
-        "sum": 117831,
-        "medium": 23015
+        "max": 10000,
+        "min": 1000,
+        "median": 10,
+        "mean": 10,
+        "sum": 10
       }
     },
     {
-      "raw": {
-        "IRawCityData": [
-          [2013, 2014, 2015, 2016, 2017], // 年份
-          [19801, 21331, 23015, 25669, 28015] // 年份对应数据
-        ],
-        "name": "天津市",
-        "keyName": "gdpSum"
-      },
+      "cityName": "天津",
+      "raw": [
+        [2013, 2014, 2015, 2016, 2017],
+        [10810, 9180, 12320, 12800, 12800, 12550]
+      ],
       "stat": {
-        "city": "天津市",
-        "min": 19801,
-        "max": 28015,
-        "mean": 23566.2,
-        "sum": 117831,
-        "medium": 23015
+        "max": 10000,
+        "min": 1000,
+        "median": 10,
+        "mean": 10,
+        "sum": 10
       }
     }
   ]

@@ -12,7 +12,6 @@ interface IStat {
 
 // 单个城市的接口
 interface CityData {
-  keyName: string
   cityName: string
   // 元数据
   raw: IRawCityData[] //数组
@@ -24,6 +23,7 @@ interface CityData {
 export interface IShowResponse {
   // 0 为成功，其他为失败
   code: number
+  keyName: string
   // 错误信息
   message: string
   data: CityData[]
