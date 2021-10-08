@@ -36,5 +36,5 @@ export interface IShowResponse {
 
 export interface IShowRequest {
   key: string // 传递的对应属性名称
-  id: string //城市的id, 支持多选
+  cityNum: string //城市的id, 支持多选
 }
